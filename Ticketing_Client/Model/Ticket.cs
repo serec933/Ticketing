@@ -7,6 +7,10 @@ namespace Ticketing_Client.Model
 {
     public class Ticket
     {
+        public Ticket()
+        {
+            Notes = new List<Notes>();
+        }
         public int Id { get; set; } //riconosce la chiave primaria
         public DateTime IssueDate { get; set; }
         public string Title { get; set; }

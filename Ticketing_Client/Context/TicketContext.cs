@@ -12,8 +12,8 @@ namespace Ticketing_Client.Context
 {
     public sealed class TicketContext : DbContext
     {
-        DbSet<Ticket> Tickets { get; set; }
-        DbSet<Notes> Notes { get; set; }
+       public  DbSet<Ticket> Tickets { get; set; }
+       public DbSet<Notes> Notes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
