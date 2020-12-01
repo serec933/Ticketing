@@ -14,5 +14,11 @@ namespace Ticketing_Client.Model
         public string Category { get; set; }
         public string Priority { get; set; }
         public string State { get; set; }
+        public string Requestor { get; set; }
+
+        //NAVIGATION PROPERTY
+        public virtual List<Notes> Notes { get; set; } ///Monodirezionale: da ticket alle note
+       
+
     }
 }
