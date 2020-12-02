@@ -23,6 +23,8 @@ namespace Ticketing_Client.Model.Configuration
             builder.Property(t => t.Requestor)
                 .HasMaxLength(50)
                 .IsRequired();
+            builder.Property(t => t.RowVersion)
+                    .IsRowVersion();
             builder
                 .HasMany(t => t.Notes)
                 .WithOne(n => n.Ticket)

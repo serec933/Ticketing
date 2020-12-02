@@ -21,7 +21,9 @@ namespace Ticketing_Client.Context
             //configurazione fatta attraverso la classe helper
             //Fattorizzazione del codice
             //string cs = config.GetSection("ConncetionStrings")["TicketDb"]
+            optionBuilder.UseLazyLoadingProxies();
             optionBuilder.UseSqlServer(cs);//metto la string in un file di configurazione (FILE JASON)
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -15,6 +15,9 @@ namespace Ticketing_Client.Model.Configuration
             builder.Property(n => n.Comments)
                 .HasMaxLength(1000)
                 .IsRequired();
+
+            builder.Property(n => n.RowVersion)
+                .IsRowVersion();
         }
     }
 }
