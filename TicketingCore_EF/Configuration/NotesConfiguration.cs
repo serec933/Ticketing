@@ -3,8 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TicketingCore.Model;
 
-namespace Ticketing_Client.Model.Configuration
+namespace TicketingCore_EF.Model.Configuration
 {
     public class NotesConfiguration : IEntityTypeConfiguration<Notes>
     {

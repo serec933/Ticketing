@@ -22,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TicketingCore\TicketingCore.csproj" />
+    <ProjectReference Include="..\TicketingCore_EF\TicketingCore_EF.csproj" />
     <ProjectReference Include="..\Ticketing_Helpers\Ticketing_Helpers.csproj" />
   </ItemGroup>
 

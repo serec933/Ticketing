@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Ticketing_Client.Migrations
+namespace TicketingCore_EF.Migrations
 {
     public partial class Concurrency : Migration
     {

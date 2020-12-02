@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Ticketing_Client.Context;
+using TicketingCore_EF;
 
-namespace Ticketing_Client.Migrations
+namespace TicketingCore_EF.Migrations
 {
-    [DbContext(typeof(TicketContext))]
-    [Migration("20201202111540_Concurrency")]
-    partial class Concurrency
+    [DbContext(typeof(Context.TicketContext))]
+    partial class TicketContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,12 +99,12 @@ namespace Ticketing_Client.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Ticket");
+                    //b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("Ticketing_Client.Model.Ticket", b =>
                 {
-                    b.Navigation("Notes");
+                    //b.Navigation("Notes");
                 });
 #pragma warning restore 612, 618
         }

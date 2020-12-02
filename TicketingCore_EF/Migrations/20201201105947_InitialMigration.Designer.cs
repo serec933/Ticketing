@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Ticketing_Client.Context;
+using TicketingCore_EF.Context;
 
-namespace Ticketing_Client.Migrations
+namespace TicketingCore_EF.Migrations
 {
     [DbContext(typeof(TicketContext))]
-    [Migration("20201201113603_TicketRequestorAdded")]
-    partial class TicketRequestorAdded
+    [Migration("20201201105947_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,11 +41,6 @@ namespace Ticketing_Client.Migrations
 
                     b.Property<string>("Priority")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Requestor")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");

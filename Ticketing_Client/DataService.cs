@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Ticketing_Client.Context;
-using Ticketing_Client.Model;
+using TicketingCore_EF.Context;
+using TicketingCore.Model;
 
-namespace Ticketing_Client
+namespace TicketingCore_EF
 {
     public class DataService
     {

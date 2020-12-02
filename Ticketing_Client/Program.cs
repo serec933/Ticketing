@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Ticketing_Client.Model;
+using TicketingCore.Model;
 
-namespace Ticketing_Client
+namespace TicketingCore_EF
 {
     class Program
     {

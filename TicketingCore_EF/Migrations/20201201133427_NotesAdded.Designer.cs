@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Ticketing_Client.Context;
+using TicketingCore_EF.Context;
 
-namespace Ticketing_Client.Migrations
+namespace TicketingCore_EF.Migrations
 {
     [DbContext(typeof(TicketContext))]
-    partial class TicketContextModelSnapshot : ModelSnapshot
+    [Migration("20201201133427_NotesAdded")]
+    partial class NotesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,11 +32,6 @@ namespace Ticketing_Client.Migrations
                         .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
-
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("rowversion");
 
                     b.Property<int>("TicketId")
                         .HasColumnType("int");
@@ -72,11 +69,6 @@ namespace Ticketing_Client.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<byte[]>("RowVersion")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("rowversion");
-
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
@@ -99,12 +91,12 @@ namespace Ticketing_Client.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Ticket");
+                    //b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("Ticketing_Client.Model.Ticket", b =>
                 {
-                    b.Navigation("Notes");
+                    //b.Navigation("Notes");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Ticketing_Client.Model;
-using Ticketing_Client.Model.Configuration;
+using TicketingCore_EF.Model;
+using TicketingCore_EF.Model.Configuration;
 using Ticketing_Helpers;
+using TicketingCore.Model;
 
-namespace Ticketing_Client.Context
+namespace TicketingCore_EF.Context
 {
     public sealed class TicketContext : DbContext
     {
